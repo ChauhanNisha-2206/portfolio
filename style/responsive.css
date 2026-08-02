@@ -1,0 +1,46 @@
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 980px){
+  .about-container{ grid-template-columns:1fr; }
+  .contact-container{ grid-template-columns:1fr; }
+  .hero-container{ flex-direction:column; text-align:center; }
+  .hero-content{ max-width:100%; }
+  .hero-content p{ margin-left:auto; margin-right:auto; }
+  .hero-buttons, .social-links{ justify-content:center; }
+  .orb-stage{ width:320px; height:320px; }
+}
+
+@media (max-width: 860px){
+  .nav-links{
+    position:fixed; top:0; right:0; height:100vh; width:min(78vw, 320px);
+    flex-direction:column; align-items:flex-start; gap:8px;
+    background:var(--glass-bg-strong); backdrop-filter:blur(18px);
+    padding:100px 30px 30px; transform:translateX(100%);
+    transition:transform .35s ease; z-index:190;
+    box-shadow:-10px 0 40px var(--glass-shadow);
+  }
+  .nav-links.open{ transform:translateX(0); }
+  .nav-links li{ width:100%; }
+  .nav-links a{ display:block; padding:10px 0; font-size:1rem; }
+  .menu-btn{ display:block; z-index:210; }
+  .section{ padding:90px 0; }
+}
+
+@media (max-width: 600px){
+  .container{ padding:0 22px; }
+  .orb-stage{ width:260px; height:260px; }
+  .photo-frame{ width:170px; height:220px; }
+  .badge-ai, .badge-code, .badge-cloud{ font-size:.62rem; padding:6px 10px; gap:5px; }
+  .badge-ai{ left:-8px; }
+  .badge-code{ right:-8px; }
+  .badge-cloud{ left:-4px; }
+  .hero-visuals{ padding:0 26px; }
+  .skills-container, .projects-container, .certificate-grid{ grid-template-columns:1fr; }
+  .about-info{ grid-template-columns:1fr 1fr; }
+  .timeline{ padding-left:28px; }
+  .timeline-dot{ left:-28px; }
+  .contact-form{ padding:26px; }
+  .about-content{ padding:30px; }
+}

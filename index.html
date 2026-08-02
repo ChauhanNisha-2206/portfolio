@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nisha Chauhan | CSE Student Exploring AI, ML &amp; Emerging Technologies</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<!-- CSS -->
+<link rel="stylesheet" href="C:\Users\Hp\OneDrive\Desktop\portfolio\style\styles.css">
+<link rel="stylesheet" href="C:\Users\Hp\OneDrive\Desktop\portfolio\style\animations.css">
+<link rel="stylesheet" href="C:\Users\Hp\OneDrive\Desktop\portfolio\style\responsive.css">
+</head>
+
+<body>
+
+<!-- Painterly Ghibli-inspired sky (procedural fallback) -->
+<canvas id="bg-ghibli"></canvas>
+
+<!-- Optional real artwork: drop your own image/video here and it takes over automatically -->
+<img id="bgArt" class="bg-art" src="assets/images/background.jpg" alt="" onerror="this.remove()">
+<video id="bgArtVideo" class="bg-art" autoplay muted loop playsinline
+       onloadeddata="document.getElementById('bg-ghibli').style.opacity='0'; this.style.opacity='1';"
+       onerror="this.remove()">
+  <source src="assets/images/background.mp4" type="video/mp4">
+</video>
+
+<!-- Floating light motes -->
+<canvas id="particles"></canvas>
+
+<!-- ================= NAVBAR ================= -->
+<header>
+<nav class="navbar" id="navbar">
+  <div class="container nav-container">
+    <a href="#home" class="logo">Nisha<span>.</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="menu-btn" id="menuBtn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </div>
+</nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="hero">
+  <div class="container hero-container">
+
+    <div class="hero-content fade-left">
+      <span class="tech-badge">✨ Building Tomorrow With AI</span>
+      <h1>Hi, I'm <span>Nisha</span></h1>
+      <h3><span id="typing"></span><span class="cursor">|</span></h3>
+      <p>
+        Computer Science Engineering student passionate about
+        Artificial Intelligence, Machine Learning, LLMs, RAG systems
+        and Full Stack Development.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\resume\nisha.pdf" class="btn btn-primary" download>
+          <i class="fa-solid fa-download"></i> Download Resume
+        </a>
+        <a href="#projects" class="btn btn-outline">View Projects</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/ChauhanNisha-2206" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/nisha-chauhan007" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://leetcode.com/u/nisha_002/" target="_blank" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+      </div>
+    </div>
+
+    <div class="hero-image fade-right">
+      <div class="hero-visuals">
+        <div class="orb-stage">
+          <canvas id="energyOrb"></canvas>
+          <span class="orb-sparkle s1"></span>
+          <span class="orb-sparkle s2"></span>
+          <span class="orb-sparkle s3"></span>
+          <span class="orb-sparkle s4"></span>
+          <div class="photo-frame float">
+            <div class="profile-card">
+              <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\portfolio\Screenshot 2026-08-02 131706.png" alt="Nisha" class="profile-img"
+                   onerror="this.onerror=null;this.parentElement.classList.add('no-photo');this.remove();">
+            </div>
+            <div class="tech-badge badge-ai"><i class="fa-solid fa-brain"></i>AI/ML</div>
+            <div class="tech-badge badge-code"><i class="fa-brands fa-python"></i>Python</div>
+            <div class="tech-badge badge-cloud"><i class="fa-solid fa-diagram-project"></i>RAG</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="scroll-cue">scroll</div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About <span>Me</span></h2>
+
+    <div class="about-container">
+      <div class="about-content glass">
+        <h3>
+           Curiosity Drives Everything I Build
+        </h3>
+
+        <p>
+           Hi! I'm Nisha, a Computer Science Engineering student passionate about
+           Artificial Intelligence, Machine Learning, Large Language Models,
+           Retrieval-Augmented Generation, and Full Stack Development.
+           I enjoy exploring emerging technologies and turning ideas into practical solutions.
+        </p>
+
+        <p>
+          My journey began with Electronics and IoT, where I learned how hardware
+          and software work together to solve real-world problems. This curiosity
+          led me towards Computer Science, AI systems, and intelligent applications.
+        </p>
+
+         <p>
+           Currently, I am focused on learning, building projects, and gaining
+           hands-on experience in AI, software development, and modern technologies.
+           I believe every project is a chance to improve, innovate, and create
+           meaningful impact.
+        </p>
+      </div>
+
+      <div class="about-info">
+        <div class="info-card glass">
+          <div class="info-icon"><i class="fa-solid fa-brain"></i></div>
+          <h4>AI/ML</h4>
+          <p>RAG · LLMs</p>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon"><i class="fa-solid fa-microchip"></i></div>
+          <h4>Embedded</h4>
+          <p>ESP32 · Arduino</p>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon"><i class="fa-solid fa-code"></i></div>
+          <h4>Full Stack</h4>
+          <p>HTML · CSS · JS · PHP</p>
+        </div>
+        <div class="info-card glass">
+          <div class="info-icon"><i class="fa-solid fa-database"></i></div>
+          <h4>Core CS</h4>
+          <p>DSA · DBMS · OS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+      <div class="skill-card glass">
+        <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+        <h3>Frontend</h3>
+        <p>HTML, CSS, JavaScript, Bootstrap</p>
+      </div>
+      <div class="skill-card glass">
+        <div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+        <h3>Backend</h3>
+        <p>Python, Java, PHP, MySQL</p>
+      </div>
+      <div class="skill-card glass">
+        <div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+        <h3>Artificial Intelligence</h3>
+        <p>Machine Learning, LLM, RAG, AI Agents</p>
+      </div>
+      <div class="skill-card glass">
+        <div class="skill-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>IoT &amp; Embedded</h3>
+        <p>ESP32, Arduino, Sensors, Embedded Systems</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title">My <span>Journey</span></h2>
+
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass">
+          <span class="timeline-date">June 2026 – Present</span>
+          <h3>AI/ML Intern</h3>
+          <span class="timeline-org">Airport Authority of India (AAI)</span>
+          <p>Developed a document-based RAG application using Python — PDF parsing, OCR, and FAISS-based vector search for intelligent document retrieval.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass">
+          <span class="timeline-date">Sept 2025 – Oct 2025</span>
+          <h3>Python &amp; Machine Learning Intern</h3>
+          <span class="timeline-org">IGDTUW</span>
+          <p>Built machine learning models using Python and Scikit-learn; performed data preprocessing, feature engineering, and model evaluation.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass">
+          <span class="timeline-date">July – Oct 2024</span>
+          <h3>Associate JTO Trainee</h3>
+          <span class="timeline-org">IndiGo</span>
+          <p>Assisted in inventory documentation and technical operations; collaborated with cross-functional teams to support daily activities.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content glass">
+          <span class="timeline-date">June – July 2023</span>
+          <h3>Technical Intern</h3>
+          <span class="timeline-org">JSE Electronics</span>
+          <p>Assisted in electronic hardware testing and basic circuit troubleshooting; supported component inspection, soldering, and hardware assembly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title">Featured <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+      <!-- PROJECT 1 -->
+      <div class="project-card glass reveal">
+        <div class="project-image">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\projects\rag.png" alt="RAG Project"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<div class=&quot;project-placeholder&quot;><i class=&quot;fa-solid fa-robot&quot;></i></div>'">
+        </div>
+        <div class="project-content">
+          <h3>AI Powered PDF Chatbot</h3>
+          <p>A Retrieval-Augmented Generation system that answers questions from PDF documents using embeddings, a vector database and an LLM.</p>
+          <div class="project-tags">
+            <span>Python</span><span>FAISS</span><span>RAG</span><span>LLM</span>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 2 -->
+      <div class="project-card glass reveal">
+        <div class="project-image">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\projects\IOT based women safety system.jpeg" alt="Women Safety System Project"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<div class=&quot;project-placeholder&quot;><i class=&quot;fa-solid fa-shield-halved&quot;></i></div>'">
+        </div>
+        <div class="project-content">
+          <h3>Women Safety System</h3>
+          <p>IoT based emergency alert system using ESP32, GSM, GPS and sensors for real-time location tracking and SOS notifications.</p>
+          <div class="project-tags">
+            <span>ESP32</span><span>IoT</span><span>GSM</span><span>GPS</span>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 3 -->
+      <div class="project-card glass reveal">
+        <div class="project-image">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\projects\IOT smart desk system.jpg" alt="Smart Desk Project"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<div class=&quot;project-placeholder&quot;><i class=&quot;fa-solid fa-desktop&quot;></i></div>'">
+        </div>
+        <div class="project-content">
+          <h3>Smart Desk System</h3>
+          <p>An IoT-based smart desk monitoring system using ESP32, sensors, and Wi-Fi communication with ThingSpeak.</p>
+          <div class="project-tags">
+            <span>ESP32</span><span>Arduino</span><span>ThingSpeak</span><span>IoT</span>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT 4 -->
+      <div class="project-card glass reveal">
+        <div class="project-image">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\projects\Fingerprint door lock system.jpg" alt="Fingerprint Door Lock Project"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<div class=&quot;project-placeholder&quot;><i class=&quot;fa-solid fa-fingerprint&quot;></i></div>'">
+        </div>
+        <div class="project-content">
+          <h3>Fingerprint Door Lock</h3>
+          <p>A biometric access control system using fingerprint authentication for secure entry.</p>
+          <div class="project-tags">
+            <span>Arduino</span><span>Fingerprint Sensor</span>
+          </div>
+          <div class="project-links">
+            <a href="#"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= EDUCATION ================= -->
+<section id="education" class="section">
+  <div class="container">
+    <h2 class="section-title">My <span>Education</span></h2>
+
+    <div class="edu-timeline">
+      <div class="edu-item glass reveal">
+        <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+        <div class="edu-body">
+          <span class="edu-date">2025 – 2028 · Pursuing</span>
+          <h3>B.Tech Computer Science Engineering (Lateral Entry)</h3>
+          <p>Indira Gandhi Delhi Technical University for Women (IGDTUW)</p>
+        </div>
+      </div>
+
+      <div class="edu-item glass reveal">
+        <div class="edu-icon"><i class="fa-solid fa-microchip"></i></div>
+        <div class="edu-body">
+          <span class="edu-date">Graduated June 2024</span>
+          <h3>Diploma in Electronics &amp; Communication Engineering</h3>
+          <p>Delhi Skill and Entrepreneurship University (DSEU)</p>
+          <span class="edu-score">93.7%</span>
+        </div>
+      </div>
+
+      <div class="edu-item glass reveal">
+        <div class="edu-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <div class="edu-body">
+          <span class="edu-date">Graduated February 2022</span>
+          <h3>ITI – Electronics Mechanic</h3>
+          <p>Savitribai Phule ITI, Delhi</p>
+          <span class="edu-score">85.6%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CERTIFICATES ================= -->
+<section id="certificates" class="section">
+  <div class="container">
+    <h2 class="section-title">Achievements &amp; <span>Certificates</span></h2>
+
+    <div class="certificate-grid">
+      <div class="certificate-card glass reveal">
+        <div class="certificate-thumb">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\Certificates\Full Stack Development.png" alt="Full Stack Web Development with AI Certificate"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<i class=&quot;fa-solid fa-certificate&quot;></i>'">
+        </div>
+        <p>Full Stack Web Development with AI — Internshala Trainings, 2026</p>
+      </div>
+      <div class="certificate-card glass reveal">
+        <div class="certificate-thumb">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\Certificates\Python & ML.png" alt="Python & Machine Learning Internship Certificate"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<i class=&quot;fa-solid fa-certificate&quot;></i>'">
+        </div>
+        <p>Python &amp; Machine Learning Internship — IGDTUW, 2025</p>
+      </div>
+      <div class="certificate-card glass reveal">
+        <div class="certificate-thumb">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\Certificates\IndiGo.png" alt="Associate JTO – PLM Training Certificate"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<i class=&quot;fa-solid fa-certificate&quot;></i>'">
+        </div>
+        <p>Associate JTO – PLM Training Certificate — IndiGo, 2024</p>
+      </div>
+      <div class="certificate-card glass reveal">
+        <div class="certificate-thumb">
+          <img src="C:\Users\Hp\OneDrive\Desktop\portfolio\assets\Certificates\JSE electronics.png" alt="Technical Internship Certificate"
+               onerror="this.onerror=null;this.parentElement.innerHTML='<i class=&quot;fa-solid fa-certificate&quot;></i>'">
+        </div>
+        <p>Technical Internship Certificate — JSE Electronics, 2023</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section">
+  <div class="container">
+    <h2 class="section-title">Let's <span>Connect</span></h2>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Have a project idea?</h3>
+        <p>
+          I'm always interested in learning new technologies,
+          building AI solutions and collaborating on innovative projects.
+        </p>
+
+        <div class="contact-details">
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:nisha165963@gmail.com">nisha165963@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://www.linkedin.com/in/nisha-chauhan007" target="_blank">linkedin.com/in/nisha-chauhan007</a></p>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div>
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/ChauhanNisha-2206" target="_blank">github.com/ChauhanNisha-2206</a></p>
+            </div>
+          </div>
+          <div class="contact-item glass">
+            <div class="contact-icon"><i class="fa-solid fa-code"></i></div>
+            <div>
+              <h4>LeetCode</h4>
+              <p><a href="https://leetcode.com/u/nisha_002/" target="_blank">leetcode.com/u/nisha_002</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form glass">
+        <form id="contactForm" onsubmit="return handleContactForm(event)">
+          <div class="form-group">
+            <input type="text" name="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Your email" required>
+          </div>
+          <div class="form-group">
+             <textarea
+                name="message"
+                placeholder="Let's discuss an opportunity, project idea, or collaboration..."
+                rows="5"
+                required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-note">This form opens your email app — it isn't connected to a server, so no backend is needed to host this site.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="container">
+    <p>Built with ❤️ by <span>Nisha</span></p>
+    <p>© <span id="year"></span> All Rights Reserved</p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ================= JAVASCRIPT ================= -->
+<script src="C:\Users\Hp\OneDrive\Desktop\portfolio\script\ghibli-sky.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="C:\Users\Hp\OneDrive\Desktop\portfolio\script\orb.js" defer></script>
+<script src="C:\Users\Hp\OneDrive\Desktop\portfolio\script\particles.js" defer></script>
+<script src="C:\Users\Hp\OneDrive\Desktop\portfolio\script\typing.js" defer></script>
+<script src="C:\Users\Hp\OneDrive\Desktop\portfolio\script\script.js" defer></script>
+</body>
+</html>

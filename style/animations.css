@@ -1,0 +1,59 @@
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes blink{
+  50%{ opacity:0; }
+}
+
+@keyframes scrollDown{
+  0%{ transform:scaleY(0); transform-origin:top; }
+  50%{ transform:scaleY(1); transform-origin:top; }
+  51%{ transform-origin:bottom; }
+  100%{ transform:scaleY(0); transform-origin:bottom; }
+}
+
+@keyframes floatY{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-14px); }
+}
+.float{ animation: floatY 5s ease-in-out infinite; }
+
+@keyframes badgeFloat{
+  0%,100%{ transform:translateY(0); }
+  50%{ transform:translateY(-8px); }
+}
+.fade-left, .fade-right{ opacity:0; }
+.fade-left{ animation: fadeLeft 1s ease .15s forwards; }
+.fade-right{ animation: fadeRight 1s ease .35s forwards; }
+@keyframes fadeLeft{
+  from{ opacity:0; transform:translateX(-30px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+@keyframes fadeRight{
+  from{ opacity:0; transform:translateX(30px); }
+  to{ opacity:1; transform:translateX(0); }
+}
+
+/* scroll-reveal (triggered via JS adding .in-view) */
+.reveal{
+  opacity:0; transform:translateY(32px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.in-view{ opacity:1; transform:translateY(0); }
+
+/* stagger children of a revealed timeline / grid slightly for a nicer cascade */
+.timeline-item.reveal:nth-child(2){ transition-delay:.08s; }
+.timeline-item.reveal:nth-child(3){ transition-delay:.16s; }
+.timeline-item.reveal:nth-child(4){ transition-delay:.24s; }
+
+.project-card.reveal:nth-child(2){ transition-delay:.08s; }
+.project-card.reveal:nth-child(3){ transition-delay:.16s; }
+.project-card.reveal:nth-child(4){ transition-delay:.24s; }
+
+.certificate-card.reveal:nth-child(2){ transition-delay:.08s; }
+.certificate-card.reveal:nth-child(3){ transition-delay:.16s; }
+.certificate-card.reveal:nth-child(4){ transition-delay:.24s; }
+
+.edu-item.reveal:nth-child(2){ transition-delay:.1s; }
+.edu-item.reveal:nth-child(3){ transition-delay:.2s; }
